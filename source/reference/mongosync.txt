@@ -17,7 +17,9 @@
 Synopsis
 --------
 
-Migrate data between clusters using ``mongosync``.
+The ``mongosync`` binary is the primary process used in Cluster to Cluster 
+Synchronization.  It migrates data from one cluster to another and can keep the 
+clusters in continuous sync.
 
 Options
 -------
@@ -55,6 +57,9 @@ Global Options
       * - ``WARN``
         -
       * - ``ERROR``
+      * 
+      * 
+      * 
         -
       * - ``FATAL``
         -
@@ -75,7 +80,7 @@ Global Options
 
    Sets the shard ID for the ``mongosync`` instance.
 
-   Use this option when running multiple instances of :binary:`mongosync` on the
+   Use this option when running multiple instances of ```mongosync``` on the
    same host.
 
 .. option:: --config <filename>
