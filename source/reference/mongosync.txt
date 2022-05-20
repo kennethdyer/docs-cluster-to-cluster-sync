@@ -21,6 +21,8 @@ The ``mongosync`` binary is the primary process used in Cluster to Cluster
 Synchronization.  It migrates data from one cluster to another and can keep the 
 clusters in continuous sync.
 
+This document provides a complete overview of all command-line options.
+
 Options
 -------
 
@@ -29,52 +31,44 @@ Global Options
 
 .. option:: --cluster0 <URI>
 
-   Sets the URI of the first cluster.
+   Sets the URI of the first cluster.  The first cluster can serve as either the
+   source cluster or the destination cluster in the synchronization process,
+   depending on calls to the Cluster to Cluster Sync API.
 
 .. option:: --cluster1 <URI>
 
-   Sets the URI of the second cluster.
+   Sets the URI of the second cluster.  The second cluster can serve as either
+   the source cluster or the destination cluster in the synchronization process,
+   depending on calls to the Cluster to Cluster Sync API.
 
 .. option:: --verbosity <level>
 
    *Default*: ``INFO``
 
-   Sets the verbosity level to use in log messages.
+   Sets the verbosity level to use in log messages.  Cluster to Cluster Sync logs
+   all messages at the specified level as well as any messages at less severe levels.
 
-   This option accepts the following values:
+   The ``--verbosity`` option supports the following values:
 
-   .. list-table::
-      :header-rows: 1
-
-      * - Level
-        - Description
-      * - ``TRACE``
-        -
-      * - ``DEBUG``
-        -
-      * - ``INFO``
-        -
-      * - ``WARN``
-        -
-      * - ``ERROR``
-      * 
-      * 
-      * 
-        -
-      * - ``FATAL``
-        -
-      * - ``PANIC``
-        -
+   - ``TRACE``
+   - ``DEBUG``
+   - ``INFO``
+   - ``WARN``
+   - ``ERROR``
+   - ``FATAL``
+   - ``PANIC``
 
 .. option:: --logPath <DIR>
 
-  Sets the path to the directory used to write log files
+  Sets the path to the log directory.   Cluster to Cluster Sync writes logs to
+  files in this directory.
+
 
 .. option:: --port
 
    *Default*: ``27182``
 
-   Sets the port used by the HTTP API server.
+   Sets the port used by the HTTP server for the Cluster to CLuster Sync REST API.
 
 .. option:: --id <ID>
 
@@ -89,7 +83,7 @@ Global Options
 
 .. option:: --version, -v
 
-   Prints :binary:`mongosync` version information to stdout.
+   Prints ``mongosync`` version information to stdout.
 
 .. option:: --help, h
 
