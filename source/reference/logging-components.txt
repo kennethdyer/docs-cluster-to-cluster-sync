@@ -4,4 +4,27 @@
 Logging Components
 ==================
 
-Documentation of logging components.
+Intro text for components
+
+Components
+----------
+
+.. data:: Change Event Application
+
+   descr
+
+
+.. data:: CHECKPOINT
+
+   descr
+
+
+.. data:: Collection Copy
+
+   descr
+
+
+.. data:: Index Checker Service
+
+   descr
+
