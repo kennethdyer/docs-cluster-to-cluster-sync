@@ -14,7 +14,7 @@ Introductory Text.
 Structured Logging
 ------------------
 
-{+c2c-product-name+} outputs log messages in structured JSON format. Log messages
+``mongosync`` outputs log messages in structured JSON format. Log messages
 are written as a series of key-value pairs, where each key indicates a log message
 field type, such as the severity level, log component, and timestamp.
 
@@ -31,7 +31,7 @@ field type, such as the severity level, log component, and timestamp.
 Logging Destination
 -------------------
 
-{+c2c-product-name+} can output log messages to stdout or to file.
+``mongosync`` can output log messages to stdout or to file.
 
 By default, ``mongosync`` outputs log messages to stdout:
 
@@ -50,7 +50,7 @@ command-line or the :setting:`logPath` setting in a configuration file.
 
    $ mongosync --config /etc/mongosync.conf --logPath /var/log/mongosync
 
-{+c2c-prodct-name+} creates a directory for the given path.  Log files are created
+``mongosync`` creates a directory for the given path.  Log files are created
 in this directory.  If a ``mongosync.log`` file already exists, ``mongosync``
 rotates the files.
 
@@ -63,7 +63,11 @@ rotates the files.
 Verbosity Levels
 ----------------
 
-High level notes on  verbosity levels.
+{+c2c-product-name+} supports user-defined verbosity to increase or decrease
+the level of log messages ``mongosync`` outputs.
+
+The verbosity level can be set using the :option:`--verbosity` option from the
+command-line or the :setting:`verbosity` setting in the configuration file.
 
 Examples
 --------
