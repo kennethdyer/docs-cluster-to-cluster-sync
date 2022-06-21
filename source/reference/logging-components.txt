@@ -1,0 +1,7 @@
+.. _c2c-logging-components:
+
+==================
+Logging Components
+==================
+
+Documentation of logging components.

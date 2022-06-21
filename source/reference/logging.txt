@@ -1,0 +1,35 @@
+.. _c2c-logging:
+
+=======
+Logging
+=======
+
+.. default-domain:: mongodb
+
+Introductory Text.
+
+Structured Logging
+------------------
+
+Basic outline of JSON format
+
+Configuration
+-------------
+
+High level notes on configuration.
+
+Verbosity Levels
+----------------
+
+High level notes on  verbosity levels.
+
+Examples
+--------
+
+Examples of log messages.
+
+.. toctree::
+   :hidden:
+
+   Format </reference/logging-format>
+   Components </reference/logging-components>

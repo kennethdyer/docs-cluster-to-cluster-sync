@@ -1,0 +1,9 @@
+.. _c2c-logging-format:
+
+==================
+Log Message Format
+==================
+
+.. default-domain:: mongodb
+
+Format documentation for log messages.
