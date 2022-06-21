@@ -6,18 +6,60 @@ Logging
 
 .. default-domain:: mongodb
 
+{+c2c-full-product-name+} maintains a running log of events, including entries
+such as 
+
 Introductory Text.
 
 Structured Logging
 ------------------
 
-Basic outline of JSON format
+{+c2c-product-name+} outputs log messages in structured JSON format. Log messages
+are written as a series of key-value pairs, where each key indicates a log message
+field type, such as the severity level, log component, and timestamp.
 
-Configuration
--------------
+.. code-block:: json
 
-High level notes on configuration.
+    {
+        "level": "info",
+        "mongosyncID": "shard01",
+        "component": "Change Event Application",
+        "time": "2022-06-21T09:31:42-04:00",
+        "message": "Starting change stream reader."
+    }
 
+Logging Destination
+-------------------
+
+{+c2c-product-name+} can output log messages to stdout or to file.
+
+By default, ``mongosync`` outputs log messages to stdout:
+
+.. code-block:: console
+
+   $ mongosync --config /etc/mongosync.conf
+   {"level":"info","mongosyncID":"shard02","verbosity":"INFO","id":"shard02","port":27301,"time":"2022-06-21T11:15:33-04:00","message":"Mongosync Options"}
+   {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Initialized client0 with URI: mongodb://192.0.2.1:27130 and client1 with URI: mongodb://192.0.2.2:27140."}
+   {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Preflight checks completed."}
+   {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Launch replication thread"}
+
+To output log messages to file, use the :option:`--logPath` option on the
+command-line or the :setting:`logPath` setting in a configuration file.
+
+.. code-block:: console
+
+   $ mongosync --config /etc/mongosync.conf --logPath /var/log/mongosync
+
+{+c2c-prodct-name+} creates a directory for the given path.  Log files are created
+in this directory.  If a ``mongosync.log`` file already exists, ``mongosync``
+rotates the files.
+
+.. code-block:: console
+
+   $ ls /var/log/mongosync
+   mongosync-2022-06-17T16-27-58.187.log  mongosync.log
+   mongosync-2022-06-21T13-31-42.668.log
+ 
 Verbosity Levels
 ----------------
 
