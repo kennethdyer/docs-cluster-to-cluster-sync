@@ -14,7 +14,7 @@ Introductory Text.
 Structured Logging
 ------------------
 
-``mongosync`` outputs log messages in structured JSON format. Log messages
+:program:`mongosync` outputs log messages in structured JSON format. Log messages
 are written as a series of key-value pairs, where each key indicates a log message
 field type, such as the severity level, log component, and timestamp.
 
@@ -31,7 +31,7 @@ field type, such as the severity level, log component, and timestamp.
 Logging Destination
 -------------------
 
-``mongosync`` can output log messages to stdout or to file.
+:program:`mongosync` can output log messages to stdout or to file.
 
 By default, ``mongosync`` outputs log messages to stdout:
 
@@ -64,7 +64,7 @@ Verbosity Levels
 ----------------
 
 {+c2c-product-name+} supports user-defined verbosity to increase or decrease
-the level of log messages ``mongosync`` outputs.
+the level of log messages :program:`mongosync` outputs.
 
 The verbosity level can be set using the :option:`--verbosity` option from the
 command-line or the :setting:`verbosity` setting in the configuration file.
