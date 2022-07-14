@@ -21,6 +21,11 @@ By default, ``mongosync`` outputs log messages to stdout:
 .. code-block:: console
 
    $ mongosync --config /etc/mongosync.conf
+
+Example output:
+
+.. code-block:: json 
+
    {"level":"info","mongosyncID":"shard02","verbosity":"INFO","id":"shard02","port":27301,"time":"2022-06-21T11:15:33-04:00","message":"Mongosync Options"}
    {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Initialized client0 with URI: mongodb://192.0.2.1:27130 and client1 with URI: mongodb://192.0.2.2:27140."}
    {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Preflight checks completed."}
@@ -42,7 +47,45 @@ rotates the files.
    $ ls /var/log/mongosync
    mongosync-2022-06-17T16-27-58.187.log  mongosync.log
    mongosync-2022-06-21T13-31-42.668.log
+
+To pretty print the logs, pipe the log to ``jq``:
+
+.. code-block:: console
+
+   $ cat /var/log/mongosync/mongosync.log
+
+Example output:
+
+.. code-block:: json
  
+   {
+      "level": "info",
+      "mongosyncID": "shard02",
+      "verbosity": "INFO",
+      "id": "shard02",
+      "port":27301,
+      "time": "2022-06-21T11:15:33-04:00",
+      "message": "Mongosync Options"
+   }
+   {
+      "level": "info",
+      "mongosyncID": "shard02",
+      "time": "2022-06-21T11:15:33-04:00",
+      "message": "Initialized client0 with URI: mongodb://192.0.2.1:27130 and client1 with URI: mongodb://192.0.2.2:27140."
+   }
+   {
+      "level": "info",
+      "mongosyncID": "shard02",
+      "time": "2022-06-21T11:15:33-04:00",
+      "message": "Preflight checks completed."
+   }
+   {
+      "level": "info",
+      "mongosyncID": "shard02",
+      "time": "2022-06-21T11:15:33-04:00",
+      "message": "Launch replication thread"
+   }
+
 Verbosity Levels
 ----------------
 
