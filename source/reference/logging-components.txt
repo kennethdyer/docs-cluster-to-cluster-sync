@@ -11,20 +11,42 @@ Components
 
 .. data:: Change Event Application
 
-   descr
+   Messages relate to the Change Event Application (CEA), which monitors a
+   change stream on the source cluster and converts :ref:`change events
+   <change-events>` into writes.
+
+
+.. data:: Change Event dispatcher
+
+   Messages relate to the Change Event Dispatcher, which batches change stream
+   events from the source cluster.
+
+
+.. data:: Change Event processor
+
+   Messages relate to the Change Event Processor, which receives change stream
+   events and applies them to the destination cluster.
+
+
+.. data:: Change stream reader
+
+   Messages relate to the Change Stream Reader, which reads change stream events
+   on the source cluster and sends them to a channel for processing.
 
 
 .. data:: CHECKPOINT
 
-   descr
+   Messages relate to snapshots taken before and after an operation.
 
 
 .. data:: Collection Copy
 
-   descr
+   Messages relate to the copying of a collection from the source to destination
+   cluster.
 
 
 .. data:: Index Checker Service
 
-   descr
+   Messages relate to the Index Checker Service, which matches indexes on the
+   source and destination clusters. 
 
