@@ -4,7 +4,23 @@
 Logging Components
 ==================
 
-Intro text for components
+Log entries use the ``componentName`` field to indicate the component that generated
+the log message.
+
+For example:
+
+.. code-block:: json
+   :copyable: false
+   :emphasize: 5
+
+   {
+      "level":         "info",
+      "serverID":      "0624a3e",
+      "mongosyncID":   "coordinator",
+      "componentName": "CHECKPOINT",
+      "time":          "2022-07-13T17:44:09.837830382-04:00",
+      "message":       "starting Mongosync from change event application phase."
+   }
 
 Components
 ----------

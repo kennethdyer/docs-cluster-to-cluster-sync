@@ -74,6 +74,9 @@ contain key-value pairs with the following fields:
    * - ``mongosyncID``
      - Identifies the ``mongosync`` instance.
 
+       To set the identifier when running multiple instances of ``mongosync``,
+       use the :setting:`id` setting.
+
 
    * - ``serverID``
      - Identifies the MongoDB instance. 
