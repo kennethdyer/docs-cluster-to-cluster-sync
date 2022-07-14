@@ -17,7 +17,7 @@ such as the copying of collections and indexes, change stream events, and API ca
 
 
 Destination
--------------------
+-----------
 
 :program:`mongosync` can output log messages to stdout or to file.
 
@@ -91,8 +91,8 @@ Example output:
       "message": "Launch replication thread"
    }
 
-Verbosity Levels
-----------------
+Verbosity
+---------
 
 {+c2c-product-name+} supports user-defined verbosity to increase or decrease
 the level of log messages :program:`mongosync` outputs.
@@ -101,7 +101,7 @@ The verbosity level can be set using the :option:`--verbosity` option from the
 command-line or the :setting:`verbosity` setting in the configuration file.
 
 Format
-------------------
+------
 
 :program:`mongosync` outputs log messages in structured JSON format. Log messages
 are written as a series of key-value pairs, where each key indicates a log message
@@ -196,6 +196,9 @@ Log entries contain key-value pairs with the following fields:
    * - ``time``
      - Time when the log message was generated.
 
+
+Components
+----------
 
 Log entries use the ``componentName`` field to indicate the component that generated
 the log message.
