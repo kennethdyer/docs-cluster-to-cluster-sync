@@ -126,9 +126,30 @@ Log entries contain key-value pairs with the following fields:
    * - Field
      - Description 
 
+   * - ``applier``
+     - Identifier of the event applier. 
+
+
+   * - ``applierName``
+     - Name of the event applier.
+
+
+   * - ``arch``
+     - The architecture of the system running ``mongosync``.
+       For example, ``amd64``.
+
+
+   * - ``attemptLimit``
+     - Number of times ``mongosync`` will attempt the operation.
+
 
    * - ``attemptNumber``
      - The number of times ``mongosync`` has attempted the operation.
+
+
+   * - ``body``
+     - The body of a message sent to the HTTP API or the body of the message
+       returned by an HTTP API call.
 
 
    * - ``client``
@@ -139,8 +160,20 @@ Log entries contain key-value pairs with the following fields:
      - The collection ``mongosync`` operated on.
 
 
+   * - ``collTempName``
+     - Temporary named used for the collection ``mongosync`` operates on.
+
+
    * - ``command``
      - The operation performed by ``mongosync``.
+
+
+   * - ``commit``
+     - The Git commit used to build ``mongosync``.
+
+
+   * - ``compiler``
+     - The compiler used to build ``mongosync``.
 
 
    * - ``context``
@@ -151,6 +184,18 @@ Log entries contain key-value pairs with the following fields:
      - The database ``mongosync`` operated on.
 
 
+   * - ``destination``
+     - The destination cluster (``cluster0`` or ``cluster1``).
+
+
+   * - ``dispatcher``
+     - The dispatcher that logged the message.
+
+
+   * - ``dstUUID``
+     - UUID of the destination cluster.
+
+
    * - ``durationLimit (seconds)``
      - The timeout value for the operation. 
 
@@ -159,8 +204,20 @@ Log entries contain key-value pairs with the following fields:
      - The amount of time ``mongosync`` has spent on the operation.
 
 
+   * - ``enableUserWriteBlocking``
+     - Whether ``mongosync`` enables user write blocking on the source cluster.
+
+
    * - ``epochSeconds``
      - The Unix timestamp of the operation.
+
+
+   * - ``errGroupName``
+     - Name of the error group that logged the error.
+
+
+   * - ``errGroupRoutineID``
+     - Numeric identifier of the error group routine.
 
 
    * - ``error``
@@ -171,6 +228,23 @@ Log entries contain key-value pairs with the following fields:
      - Numeric code identifying the error returned by the operation.
 
 
+   * - ``go_version``
+     - The version of Go used by ``mongosync``.
+
+
+   * - ``id``
+     - The value set on the :setting:`id` setting or the :option:`--id`
+       option.
+
+
+   * - ``lastApplyFailed``
+     - Whether ``mongosync`` failed attempting the last apply.
+
+
+   * - ``latency``
+     - The amount of time it takes for the HTTP API to respond to a request.
+
+
    * - ``level``
      - The level of the log message.
 
@@ -178,8 +252,17 @@ Log entries contain key-value pairs with the following fields:
        :setting:`verbosity` setting.
 
 
+   * - ``logPath``
+     - The value set on the :setting:`logPath` setting or the 
+       :option:`--logPath`` option.
+
+
    * - ``message``
      - The log message.
+
+
+   * - ``method``
+     - The HTTP method used in an API call.  For example, ``POST`` or ``GET``.
 
 
    * - ``mongosyncID``
@@ -189,12 +272,63 @@ Log entries contain key-value pairs with the following fields:
        use the :setting:`id` setting.
 
 
+   * - ``ordinalValue``
+     - Provides the operation position of the last stored operation.
+
+
+   * - ``os``
+     - The operating system running ``mongosync``.
+
+
+   * - ``outOfOrder``
+     - Whether the operation is applied out of order.
+
+
+   * - ``port``
+     - The value of the :setting:`port` setting or the :option:`--port`
+       option.
+
+
+   * - ``reversible``
+     - Whether ``mongosync`` can reverse the synchronization, replicating writes
+       from the destination cluster to the source cluster.
+       
+
    * - ``serverID``
      - Identifies the MongoDB instance. 
 
 
+   * - ``source``
+     - The source cluster (``cluster0`` or ``cluster1``).
+
+
+   * - ``srcUUID``
+     - UUID of the source cluster.
+
+
+   * - ``status``
+     - The response code given to a call to the HTTP API.
+
+
    * - ``time``
      - Time when the log message was generated.
+
+
+   * - ``traceID``
+     - Hash identifying the operation for trace.
+
+
+   * - ``uri``
+     - The URI of an API call. 
+
+
+   * - UUID
+     - UUID of the cluster ``mongosync`` operates on.
+
+
+   * - ``verbosity``
+     - The value set on the :setting:`verbosity` setting or the
+       :option:`--verbosity` option.
 
 
 Components
