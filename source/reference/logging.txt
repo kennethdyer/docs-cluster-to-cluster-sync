@@ -7,11 +7,16 @@ Logging
 .. default-domain:: mongodb
 
 {+c2c-full-product-name+} maintains a running log of events, including entries
-such as 
+such as the copying of collections and indexes, change stream events, and API calls. 
 
-Introductory Text.
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 1
+   :class: singlecol
 
-Logging Destination
+
+Destination
 -------------------
 
 :program:`mongosync` can output log messages to stdout or to file.
