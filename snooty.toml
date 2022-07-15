@@ -18,6 +18,7 @@ toc_landing_pages = ["/quickstart",
                      "/reference/logging",
                      "/connecting",
                      "/using-mongosync",
+                     "/multiple-mongosyncs",
                      "/release-notes/release-notes",
                      "/faq"
                     ]
