@@ -13,7 +13,7 @@ Reference
    /reference/mongosync-states
    /reference/oplog-sizing
    /reference/configuration
-   /reference/failure-recovery
+   /reference/disaster-recovery
    /reference/limitations
    /reference/logging
 
