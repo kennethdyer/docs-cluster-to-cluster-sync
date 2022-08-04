@@ -8,8 +8,10 @@ Reference
    :titlesonly: 
 
    /reference/mongosync
+   /reference/configuration
    /reference/api
    /reference/mongosync-states
-   /reference/logging
+   /reference/configuration
    /reference/limitations
+   /reference/logging
 
