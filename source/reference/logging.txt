@@ -30,6 +30,7 @@ By default, ``mongosync`` outputs log messages to stdout:
 Example output:
 
 .. code-block:: json 
+   :copyable: false
 
    {"level":"info","mongosyncID":"shard02","verbosity":"INFO","id":"shard02","port":27301,"time":"2022-06-21T11:15:33-04:00","message":"Mongosync Options"}
    {"level":"info","mongosyncID":"shard02","time":"2022-06-21T11:15:33-04:00","message":"Initialized client0 with URI: mongodb://192.0.2.1:27130 and client1 with URI: mongodb://192.0.2.2:27140."}
@@ -50,6 +51,12 @@ rotates the files.
 .. code-block:: console
 
    $ ls /var/log/mongosync
+
+Example output:
+
+.. code-block:: none
+   :copyable: false
+
    mongosync-2022-06-17T16-27-58.187.log  mongosync.log
    mongosync-2022-06-21T13-31-42.668.log
 
@@ -57,11 +64,12 @@ To pretty print the logs, pipe the log to ``jq``:
 
 .. code-block:: console
 
-   $ cat /var/log/mongosync/mongosync.log
+   $ cat /var/log/mongosync/mongosync.log | jq
 
 Example output:
 
 .. code-block:: json
+   :copyable: false
  
    {
       "level": "info",
@@ -108,6 +116,7 @@ are written as a series of key-value pairs, where each key indicates a log messa
 field type, such as the severity level, log component, and timestamp.
 
 .. code-block:: json
+   :copyable: false
 
     {
         "level": "info",
@@ -401,8 +410,3 @@ Examples
 
 Examples of log messages.
 
-.. toctree::
-   :hidden:
-
-   Format </reference/logging-format>
-   Components </reference/logging-components>
