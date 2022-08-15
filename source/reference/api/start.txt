@@ -116,14 +116,17 @@ Response
 
 .. include:: /includes/api/tables/basic-response.rst
 
+Examples
+--------
+
 Example 1 - Start a Standard Sync Job
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example starts a synchronization job where ``cluster0`` is
 the source and ``cluster1`` is the destination.
 
 Request
-~~~~~~~
+^^^^^^^
 
 .. literalinclude:: /includes/api/requests/start.sh
    :language: shell
