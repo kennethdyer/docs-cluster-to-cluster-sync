@@ -52,7 +52,7 @@ New Features:
 - Reduced memory allocation during change event application by approximately 
   30% for pre-6.0 releases of MongoDB Server versions.
 
-- Changed telemetry to also send error messages to Segment when ``mongosync``
+- Changed telemetry to also report error messages when ``mongosync``
   exits with a fatal error.
 
 - Added support for ``mongosync`` to sync between source and destination 
